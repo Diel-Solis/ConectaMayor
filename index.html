@@ -4,30 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConectaMayor</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>ConectaMayor</h1>
+    <img src="img/logoWhite.svg" alt="Logotipo de ConectaMayor" class="logo">
     <p>Conectando generaciones a través de la tecnología</p>
 </header>
 
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#problema">Problema</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#participa">Participa</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
+<section id="inicio" class="section">
+    <h2>¿Qué es ConectaMayor?</h2>
 
-<footer>
+    <button class="audio-btn" onclick="leerTexto('inicio', this)">
+        <span class="audio-text">Escuchar sección</span>
+        <span class="audio-bar"><span class="audio-progress"></span></span>
+    </button>
 
     <p>
-        © 2026 ConectaMayor | Proyecto Inclusivo
-    </p>
 
+        Esta es una prueba técnica.<br><br>
+
+        ConectaMayor capacita a adultos mayores en el uso del celular,
+        fomentando su independencia y comunicación.
+    </p>
+</section>
+
+<section id="problema" class="section gray">
+    <h2>Problema</h2>
+
+    <button class="audio-btn" onclick="leerTexto('problema', this)">
+        <span class="audio-text">Escuchar sección</span>
+        <span class="audio-bar"><span class="audio-progress"></span></span>
+    </button>
+
+    <ul>
+        <li>Exclusión digital</li>
+        <li>Dependencia</li>
+        <li>Dificultad de comunicación</li>
+        <li>Acceso limitado</li>
+    </ul>
+</section>
+
+<section id="servicios" class="section">
+    <h2>Servicios</h2>
+
+    <button class="audio-btn" onclick="leerTexto('servicios', this)">
+        <span class="audio-text">Escuchar sección</span>
+        <span class="audio-bar"><span class="audio-progress"></span></span>
+    </button>
+
+    <p>
+        Talleres, asesorías, guías impresas y acompañamiento.
+    </p>
+</section>
+
+<section id="participa" class="section gray">
+    <h2>Participa</h2>
+
+    <button class="audio-btn" onclick="leerTexto('participa', this)">
+        <span class="audio-text">Escuchar sección</span>
+        <span class="audio-bar"><span class="audio-progress"></span></span>
+    </button>
+
+    <p>
+        Apoya mediante talleres, convenios o donaciones.
+    </p>
+</section>
+
+<section id="contacto" class="section">
+    <h2>Contacto</h2>
+
+    <button class="audio-btn" onclick="leerTexto('contacto', this)">
+        <span class="audio-text">Escuchar sección</span>
+        <span class="audio-bar"><span class="audio-progress"></span></span>
+    </button>
+
+    <form id="formulario">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 ConectaMayor</p>
 </footer>
 
+<div id="cursor" class="cursor-box"></div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
-
