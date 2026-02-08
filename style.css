@@ -1,0 +1,177 @@
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Colores */
+
+:root {
+    --principal: #c4631c;
+    --fondo: #ffffff;
+    --gris: #f4f4f4;
+    --texto: #333333;
+}
+
+
+/* General */
+
+body {
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+
+/* Header */
+
+header {
+    background: var(--principal);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+
+/* Navegación */
+
+nav {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background 0.3s;
+}
+
+
+nav a:hover {
+    background: var(--principal);
+}
+
+
+/* Secciones */
+
+.section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.gray {
+    background: var(--gris);
+}
+
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--principal);
+}
+
+
+/* Listas */
+
+ul {
+    max-width: 600px;
+    margin: auto;
+}
+
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.card h3 {
+    color: var(--principal);
+    margin-bottom: 10px;
+}
+
+
+/* Formulario */
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+form input,
+form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+form textarea {
+    min-height: 120px;
+}
+
+
+form button {
+    background: var(--principal);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+form button:hover {
+    background: #a95317;
+}
+
+
+/* Footer */
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
