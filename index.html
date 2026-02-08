@@ -14,13 +14,21 @@
     <p>Conectando generaciones a través de la tecnología</p>
 </header>
 
-<nav>
+
+<nav class="nav">
+  <button class="nav-toggle" id="navToggle">☰</button>
+
+  <div class="nav-menu" id="navMenu">
     <a href="#inicio">Inicio</a>
     <a href="#problema">Problema</a>
     <a href="#servicios">Servicios</a>
     <a href="#participa">Participa</a>
     <a href="#contacto">Contacto</a>
+  </div>
 </nav>
+
+
+
 
 <section id="inicio" class="section">
     <h2>¿Qué es ConectaMayor?</h2>
@@ -102,7 +110,12 @@
 </footer>
 
 <div id="cursor" class="cursor-box"></div>
+<div id="nav-tip" class="nav-tip"></div>
+<div id="nav-overlay" class="nav-overlay">
+    <div class="nav-overlay-content" id="nav-overlay-text"></div>
+</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
