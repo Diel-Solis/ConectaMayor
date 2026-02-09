@@ -208,27 +208,58 @@ const navMenu = document.getElementById("navMenu");
 
 if (navToggle && navMenu) {
 
-  // Abrir / cerrar menú
   navToggle.addEventListener("click", () => {
     navMenu.classList.toggle("open");
   });
 
-  // Cerrar al tocar enlace
   navMenu.querySelectorAll("a").forEach(link => {
 
     link.addEventListener("click", () => {
-
       navMenu.classList.remove("open");
-
-      // Forzar cierre en móvil
-      navMenu.style.display = "none";
-
-      setTimeout(() => {
-        navMenu.style.display = "";
-      }, 50);
-
     });
 
   });
 
 }
+
+
+// ================= CURSOR INTELIGENTE =================
+
+const cursorBox = document.querySelector(".cursor-box");
+const logo = document.querySelector(".logo");
+
+document.addEventListener("mousemove", e => {
+
+  if (!cursorBox) return;
+
+  const el = document.elementFromPoint(e.clientX, e.clientY);
+
+  if (!el) return;
+
+  const bg = window.getComputedStyle(el).backgroundColor;
+
+  // Color principal en RGB: rgb(237, 108, 27)
+  if (bg === "rgb(237, 108, 27)") {
+    cursorBox.style.background = "white";
+  } else {
+    cursorBox.style.background = "var(--principal)";
+  }
+
+});
+
+
+// ================= OCULTAR CURSOR EN LOGO =================
+
+if (logo && cursorBox) {
+
+  logo.addEventListener("mouseenter", () => {
+    cursorBox.style.opacity = "0";
+  });
+
+  logo.addEventListener("mouseleave", () => {
+    cursorBox.style.opacity = "1";
+  });
+
+}
+
+
